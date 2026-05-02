@@ -1,0 +1,103 @@
+{
+  "nav": {
+    "pricing": "Tarifs",
+    "login": "Connexion",
+    "cta": "Essai gratuit"
+  },
+  "landing": {
+    "heroTitle": "Le CFO dont votre entreprise a toujours eu besoin. Sans le coût d'un humain.",
+    "heroSubtitle": "Fineloia transforme vos données financières en décisions stratégiques.",
+    "heroCta": "Démarrer 14 jours gratuits",
+    "heroSecondary": "Voir les tarifs",
+    "featuresTitle": "Tout pour votre équipe finance",
+    "features": [
+      "Tableau de bord KPI",
+      "Alertes intelligentes",
+      "Rapports automatiques IA",
+      "Prévisions par scénarios",
+      "Conseiller IA en chat",
+      "Benchmark secteur et pays"
+    ],
+    "pricingTitle": "Des plans simples",
+    "testimonialsTitle": "Témoignages",
+    "faqTitle": "FAQ",
+    "faq": [
+      {
+        "q": "Fineloia peut-il déplacer de l'argent ?",
+        "a": "Non. Fineloia analyse les données et recommande, l'exécution reste humaine."
+      },
+      {
+        "q": "Licence bancaire nécessaire ?",
+        "a": "Non. C'est une plateforme d'analyse et de conseil."
+      },
+      {
+        "q": "Import CSV disponible ?",
+        "a": "Oui."
+      },
+      {
+        "q": "Devises supportées ?",
+        "a": "USD, EUR, GBP, AOA, BRL et plus."
+      },
+      {
+        "q": "Inviter l'équipe ?",
+        "a": "Oui, avec rôles."
+      },
+      {
+        "q": "Annulation à tout moment ?",
+        "a": "Oui."
+      }
+    ],
+    "ctaTitle": "Commencez gratuitement 14 jours.",
+    "ctaButton": "Créer un compte"
+  },
+  "pricing": {
+    "title": "Tarifs",
+    "subtitle": "Mensuel ou annuel avec 20% de réduction annuelle.",
+    "monthly": "Mensuel",
+    "annual": "Annuel",
+    "popular": "Le plus populaire",
+    "start": "Commencer",
+    "comparisonTitle": "Comparaison détaillée"
+  },
+  "auth": {
+    "login": {
+      "title": "Bon retour",
+      "subtitle": "Accédez à votre centre financier",
+      "email": "Email",
+      "password": "Mot de passe",
+      "submit": "Se connecter",
+      "google": "Continuer avec Google",
+      "forgot": "Mot de passe oublié ?"
+    },
+    "register": {
+      "title": "Créer un compte",
+      "subtitle": "Configurez votre entreprise rapidement",
+      "next": "Suivant",
+      "back": "Retour",
+      "submit": "Créer",
+      "step1": "Entreprise",
+      "step2": "Taille",
+      "step3": "Devise",
+      "step4": "Importation"
+    }
+  },
+  "dashboard": {
+    "nav": {
+      "overview": "Vue d'ensemble",
+      "treasury": "Trésorerie",
+      "results": "Résultats",
+      "transactions": "Transactions",
+      "reports": "Rapports",
+      "forecasts": "Prévisions",
+      "advisor": "Conseiller IA",
+      "alerts": "Alertes",
+      "settings": "Paramètres"
+    },
+    "overview": {
+      "title": "Vue financière",
+      "subtitle": "Performance en temps réel",
+      "recommendation": "Recommandation de la semaine",
+      "latestAlerts": "Dernières alertes"
+    }
+  }
+}

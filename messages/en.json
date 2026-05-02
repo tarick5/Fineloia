@@ -1,0 +1,103 @@
+{
+  "nav": {
+    "pricing": "Pricing",
+    "login": "Login",
+    "cta": "Start free"
+  },
+  "landing": {
+    "heroTitle": "The CFO your company always needed. Without the cost of a human.",
+    "heroSubtitle": "Fineloia turns your financial data into strategic decisions with forecasts, risk alerts, automated reporting, and an AI advisor that speaks your language.",
+    "heroCta": "Start 14-day free trial",
+    "heroSecondary": "View pricing",
+    "featuresTitle": "Everything a finance team needs",
+    "features": [
+      "Automated KPI dashboard",
+      "Smart alerts for treasury and margin",
+      "AI-generated monthly and investor reports",
+      "Scenario forecasts and what-if analysis",
+      "Chat-based strategic advisor",
+      "Benchmarking by sector and country"
+    ],
+    "pricingTitle": "Simple plans built for growth",
+    "testimonialsTitle": "What teams say",
+    "faqTitle": "Frequently asked questions",
+    "faq": [
+      {
+        "q": "Can Fineloia move money or make payments?",
+        "a": "No. Fineloia only analyzes data and gives recommendations. Execution always remains with your team."
+      },
+      {
+        "q": "Do I need a banking license to use it?",
+        "a": "No. This is an analytics and advisory platform, not a banking product."
+      },
+      {
+        "q": "Can I import from CSV?",
+        "a": "Yes. You can upload CSV files, map columns, and auto-categorize transactions with AI."
+      },
+      {
+        "q": "Which currencies are supported?",
+        "a": "USD, EUR, GBP, AOA, BRL and many more with real-time conversions."
+      },
+      {
+        "q": "Can I invite my team?",
+        "a": "Yes. Plans include role-based seats for owners, admins, and viewers."
+      },
+      {
+        "q": "Can I cancel anytime?",
+        "a": "Yes. You can upgrade, downgrade, or cancel from billing settings."
+      }
+    ],
+    "ctaTitle": "Start free for 14 days. No credit card required.",
+    "ctaButton": "Create account"
+  },
+  "pricing": {
+    "title": "Pricing",
+    "subtitle": "Choose monthly or annual billing with 20% discount on annual plans.",
+    "monthly": "Monthly",
+    "annual": "Annual",
+    "popular": "Most popular",
+    "start": "Start free",
+    "comparisonTitle": "Detailed feature comparison"
+  },
+  "auth": {
+    "login": {
+      "title": "Welcome back",
+      "subtitle": "Access your financial command center",
+      "email": "Email",
+      "password": "Password",
+      "submit": "Sign in",
+      "google": "Continue with Google",
+      "forgot": "Forgot password?"
+    },
+    "register": {
+      "title": "Create your account",
+      "subtitle": "Set up your company in under 3 minutes",
+      "next": "Next",
+      "back": "Back",
+      "submit": "Create account",
+      "step1": "Company profile",
+      "step2": "Team size",
+      "step3": "Main currency",
+      "step4": "Data import preference"
+    }
+  },
+  "dashboard": {
+    "nav": {
+      "overview": "Overview",
+      "treasury": "Treasury",
+      "results": "Results",
+      "transactions": "Transactions",
+      "reports": "Reports",
+      "forecasts": "Forecasts",
+      "advisor": "AI Advisor",
+      "alerts": "Alerts",
+      "settings": "Settings"
+    },
+    "overview": {
+      "title": "Financial Overview",
+      "subtitle": "Real-time performance and strategic signals",
+      "recommendation": "Recommendation of the week",
+      "latestAlerts": "Latest alerts"
+    }
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "nav": {
+    "pricing": "Preços",
+    "login": "Entrar",
+    "cta": "Começar grátis"
+  },
+  "landing": {
+    "heroTitle": "O CFO que a tua empresa sempre precisou. Sem o custo de um humano.",
+    "heroSubtitle": "A Fineloia transforma dados financeiros em decisões estratégicas com previsões, alertas de risco, relatórios automáticos e um conselheiro IA no teu idioma.",
+    "heroCta": "Começar teste grátis de 14 dias",
+    "heroSecondary": "Ver preços",
+    "featuresTitle": "Tudo o que a equipa financeira precisa",
+    "features": [
+      "Dashboard automático de KPIs",
+      "Alertas inteligentes de tesouraria e margem",
+      "Relatórios mensais e para investidores gerados por IA",
+      "Previsões por cenários e análise e se",
+      "Conselheiro estratégico em chat",
+      "Benchmarking por sector e país"
+    ],
+    "pricingTitle": "Planos simples para crescer",
+    "testimonialsTitle": "O que as equipas dizem",
+    "faqTitle": "Perguntas frequentes",
+    "faq": [
+      {
+        "q": "A Fineloia pode mover dinheiro ou fazer pagamentos?",
+        "a": "Não. A Fineloia só analisa dados e recomenda acções. A execução é sempre da equipa humana."
+      },
+      {
+        "q": "Preciso de licença bancária para usar?",
+        "a": "Não. É uma plataforma de análise e aconselhamento, não um produto bancário."
+      },
+      {
+        "q": "Posso importar CSV?",
+        "a": "Sim. Faz upload do CSV, mapeia colunas e categoriza transacções com IA."
+      },
+      {
+        "q": "Que moedas são suportadas?",
+        "a": "USD, EUR, GBP, AOA, BRL e várias outras com conversão em tempo real."
+      },
+      {
+        "q": "Posso convidar a minha equipa?",
+        "a": "Sim. Os planos incluem seats com permissões por role."
+      },
+      {
+        "q": "Posso cancelar quando quiser?",
+        "a": "Sim. Podes fazer upgrade, downgrade ou cancelar nas definições de facturação."
+      }
+    ],
+    "ctaTitle": "Começa grátis por 14 dias. Sem cartão de crédito.",
+    "ctaButton": "Criar conta"
+  },
+  "pricing": {
+    "title": "Preços",
+    "subtitle": "Escolhe mensal ou anual com 20% de desconto no anual.",
+    "monthly": "Mensal",
+    "annual": "Anual",
+    "popular": "Mais popular",
+    "start": "Começar grátis",
+    "comparisonTitle": "Comparação detalhada"
+  },
+  "auth": {
+    "login": {
+      "title": "Bem-vindo de volta",
+      "subtitle": "Acede ao teu centro financeiro",
+      "email": "Email",
+      "password": "Palavra-passe",
+      "submit": "Entrar",
+      "google": "Continuar com Google",
+      "forgot": "Esqueceste a palavra-passe?"
+    },
+    "register": {
+      "title": "Criar conta",
+      "subtitle": "Configura a tua empresa em menos de 3 minutos",
+      "next": "Seguinte",
+      "back": "Voltar",
+      "submit": "Criar conta",
+      "step1": "Perfil da empresa",
+      "step2": "Dimensão da equipa",
+      "step3": "Moeda principal",
+      "step4": "Preferência de importação"
+    }
+  },
+  "dashboard": {
+    "nav": {
+      "overview": "Visão Geral",
+      "treasury": "Tesouraria",
+      "results": "Resultados",
+      "transactions": "Transacções",
+      "reports": "Relatórios",
+      "forecasts": "Previsões",
+      "advisor": "Conselheiro IA",
+      "alerts": "Alertas",
+      "settings": "Definições"
+    },
+    "overview": {
+      "title": "Visão Financeira",
+      "subtitle": "Performance em tempo real e sinais estratégicos",
+      "recommendation": "Recomendação da semana",
+      "latestAlerts": "Últimos alertas"
+    }
+  }
+}

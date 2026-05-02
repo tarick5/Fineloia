@@ -1,0 +1,103 @@
+{
+  "nav": {
+    "pricing": "Precios",
+    "login": "Iniciar sesión",
+    "cta": "Comenzar gratis"
+  },
+  "landing": {
+    "heroTitle": "El CFO que tu empresa siempre necesitó. Sin el coste de un humano.",
+    "heroSubtitle": "Fineloia convierte datos financieros en decisiones estratégicas.",
+    "heroCta": "Comenzar prueba de 14 días",
+    "heroSecondary": "Ver precios",
+    "featuresTitle": "Todo para finanzas",
+    "features": [
+      "Dashboard de KPI",
+      "Alertas inteligentes",
+      "Reportes IA automáticos",
+      "Pronósticos por escenarios",
+      "Asesor IA por chat",
+      "Benchmark por sector y país"
+    ],
+    "pricingTitle": "Planes simples",
+    "testimonialsTitle": "Testimonios",
+    "faqTitle": "Preguntas frecuentes",
+    "faq": [
+      {
+        "q": "¿Fineloia puede mover dinero?",
+        "a": "No. Solo analiza y recomienda."
+      },
+      {
+        "q": "¿Necesito licencia bancaria?",
+        "a": "No."
+      },
+      {
+        "q": "¿Importa CSV?",
+        "a": "Sí."
+      },
+      {
+        "q": "¿Monedas soportadas?",
+        "a": "USD, EUR, GBP, AOA, BRL y más."
+      },
+      {
+        "q": "¿Puedo invitar equipo?",
+        "a": "Sí."
+      },
+      {
+        "q": "¿Puedo cancelar cuando quiera?",
+        "a": "Sí."
+      }
+    ],
+    "ctaTitle": "Empieza gratis durante 14 días.",
+    "ctaButton": "Crear cuenta"
+  },
+  "pricing": {
+    "title": "Precios",
+    "subtitle": "Mensual o anual con 20% de descuento anual.",
+    "monthly": "Mensual",
+    "annual": "Anual",
+    "popular": "Más popular",
+    "start": "Comenzar",
+    "comparisonTitle": "Comparación detallada"
+  },
+  "auth": {
+    "login": {
+      "title": "Bienvenido de nuevo",
+      "subtitle": "Accede a tu centro financiero",
+      "email": "Correo",
+      "password": "Contraseña",
+      "submit": "Entrar",
+      "google": "Continuar con Google",
+      "forgot": "¿Olvidaste tu contraseña?"
+    },
+    "register": {
+      "title": "Crear cuenta",
+      "subtitle": "Configura tu empresa rápidamente",
+      "next": "Siguiente",
+      "back": "Volver",
+      "submit": "Crear",
+      "step1": "Empresa",
+      "step2": "Tamaño",
+      "step3": "Moneda",
+      "step4": "Importación"
+    }
+  },
+  "dashboard": {
+    "nav": {
+      "overview": "Visión general",
+      "treasury": "Tesorería",
+      "results": "Resultados",
+      "transactions": "Transacciones",
+      "reports": "Informes",
+      "forecasts": "Pronósticos",
+      "advisor": "Asesor IA",
+      "alerts": "Alertas",
+      "settings": "Ajustes"
+    },
+    "overview": {
+      "title": "Visión financiera",
+      "subtitle": "Rendimiento en tiempo real",
+      "recommendation": "Recomendación de la semana",
+      "latestAlerts": "Últimas alertas"
+    }
+  }
+}
