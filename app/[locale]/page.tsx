@@ -13,6 +13,7 @@ import {
 import { useTranslations } from "next-intl";
 import { SiteShell } from "@/components/layout/site-shell";
 import { PricingCards } from "@/components/layout/pricing-cards";
+import { DemoDashboardMockup } from "@/components/dashboard/demo-dashboard-mockup";
 import { Link } from "@/lib/i18n/navigation";
 
 const iconMap = [BarChart3, LineChart, BellRing, FileText, Bot, ShieldCheck];
@@ -47,131 +48,7 @@ export default function LandingPage() {
         </div>
 
         <div className="fade-in fade-in-delay-1">
-          <div className="rose-mockup">
-            <div className="hero-mini-dash">
-              <div className="hero-mini-topbar">
-                <div className="hero-mini-brand">
-                  <span className="hero-mini-brand-dot" />
-                  Fineloia
-                </div>
-                <div className="hero-mini-topbar-right">
-                  <span className="hero-mini-org">JQServices LDA</span>
-                  <span className="hero-mini-pill">EUR</span>
-                </div>
-              </div>
-
-              <div className="hero-mini-layout">
-                <aside className="hero-mini-sidebar">
-                  <span className="hero-mini-side-label">Principal</span>
-                  <p className="hero-mini-side-item hero-mini-side-item-active">Visão Geral</p>
-                  <p className="hero-mini-side-item">Tesouraria</p>
-                  <p className="hero-mini-side-item">Resultados</p>
-                  <span className="hero-mini-side-label">Inteligência</span>
-                  <p className="hero-mini-side-item">Conselheiro IA</p>
-                  <p className="hero-mini-side-item">Alertas</p>
-                  <span className="hero-mini-side-label">Conta</span>
-                  <p className="hero-mini-side-item">Relatórios</p>
-                  <p className="hero-mini-side-item">Definições</p>
-                </aside>
-
-                <div className="hero-mini-main">
-                  <div className="hero-mini-main-head">
-                    <p className="hero-mini-main-title">Visão Geral</p>
-                    <div className="hero-mini-tabs">
-                      <span className="hero-mini-tab">7d</span>
-                      <span className="hero-mini-tab hero-mini-tab-active">30d</span>
-                      <span className="hero-mini-tab">90d</span>
-                    </div>
-                  </div>
-
-                  <div className="hero-mini-metrics">
-                    <div className="hero-mini-metric">
-                      <p className="hero-mini-metric-label">Receita este mês</p>
-                      <p className="hero-mini-metric-value">€142k</p>
-                    </div>
-                    <div className="hero-mini-metric">
-                      <p className="hero-mini-metric-label">Runway</p>
-                      <p className="hero-mini-metric-value">8.7m</p>
-                    </div>
-                  </div>
-
-                  <div className="hero-mini-reco">
-                    <p className="hero-mini-reco-label">Recomendação da semana</p>
-                    <p className="hero-mini-reco-text">Reduzir cloud spend em 11% para ganhar +1.1 meses de runway.</p>
-                  </div>
-
-                  <div className="hero-mini-charts">
-                    <div className="hero-mini-chart-card">
-                      <div className="hero-mini-card-head">
-                        <span>Receita vs Despesas</span>
-                        <span>6m</span>
-                      </div>
-                      <svg viewBox="0 0 240 70" preserveAspectRatio="none" aria-hidden="true">
-                        <rect x="8" y="36" width="11" height="28" rx="3" fill="#2f6fff" />
-                        <rect x="21" y="44" width="11" height="20" rx="3" fill="#c8dcff" />
-                        <rect x="45" y="30" width="11" height="34" rx="3" fill="#2f6fff" />
-                        <rect x="58" y="40" width="11" height="24" rx="3" fill="#c8dcff" />
-                        <rect x="82" y="26" width="11" height="38" rx="3" fill="#2f6fff" />
-                        <rect x="95" y="37" width="11" height="27" rx="3" fill="#c8dcff" />
-                        <rect x="119" y="22" width="11" height="42" rx="3" fill="#2f6fff" />
-                        <rect x="132" y="33" width="11" height="31" rx="3" fill="#c8dcff" />
-                        <rect x="156" y="16" width="11" height="48" rx="3" fill="#1f56d8" />
-                        <rect x="169" y="28" width="11" height="36" rx="3" fill="#c8dcff" />
-                        <rect x="193" y="10" width="11" height="54" rx="3" fill="#1f56d8" />
-                        <rect x="206" y="23" width="11" height="41" rx="3" fill="#c8dcff" />
-                      </svg>
-                    </div>
-
-                    <div className="hero-mini-donut-card">
-                      <div className="hero-mini-card-head">
-                        <span>Despesas</span>
-                      </div>
-                      <div className="hero-mini-donut-wrap">
-                        <svg viewBox="0 0 72 72" aria-hidden="true">
-                          <circle cx="36" cy="36" r="23" fill="none" stroke="#e7f0ff" strokeWidth="9" />
-                          <circle cx="36" cy="36" r="23" fill="none" stroke="#2f6fff" strokeWidth="9" strokeDasharray="92 144.5" strokeLinecap="round" transform="rotate(-90 36 36)" />
-                          <circle cx="36" cy="36" r="23" fill="none" stroke="#92b6ff" strokeWidth="9" strokeDasharray="32 144.5" strokeDashoffset="-92" strokeLinecap="round" transform="rotate(-90 36 36)" />
-                          <circle cx="36" cy="36" r="23" fill="none" stroke="#c8dcff" strokeWidth="9" strokeDasharray="20 144.5" strokeDashoffset="-124" strokeLinecap="round" transform="rotate(-90 36 36)" />
-                          <text x="36" y="39" textAnchor="middle" className="hero-mini-donut-value">€31.8k</text>
-                        </svg>
-                        <div className="hero-mini-donut-legend">
-                          <p><span className="hero-mini-dl-dot hero-mini-dl-op" /> Op. 42%</p>
-                          <p><span className="hero-mini-dl-dot hero-mini-dl-mk" /> Mkt 15%</p>
-                          <p><span className="hero-mini-dl-dot hero-mini-dl-rh" /> RH 8%</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="hero-mini-bottom">
-                    <div className="hero-mini-list-card">
-                      <div className="hero-mini-card-head">
-                        <span>Últimas transacções</span>
-                      </div>
-                      <ul className="hero-mini-list">
-                        <li><span>AWS Cloud</span><strong>-€2.340</strong></li>
-                        <li><span>Cliente Acme</span><strong className="hero-mini-positive">+€8.500</strong></li>
-                        <li><span>Google Ads</span><strong>-€1.200</strong></li>
-                      </ul>
-                    </div>
-
-                    <div className="hero-mini-ai-card">
-                      <div className="hero-mini-card-head">
-                        <span>Conselheiro Fineloia</span>
-                        <span className="hero-mini-online">● online</span>
-                      </div>
-                      <p className="hero-mini-ai-text">
-                        Margem subiu <strong>+3pp</strong>. Reduzir cloud spend em 11% adiciona <strong>+1.1 meses de runway</strong>.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="rose-hero-badge">+2.400 empresas activas</div>
-            <div className="rose-hero-badge-alt">Alertas críticos em tempo real</div>
-          </div>
+          <DemoDashboardMockup />
         </div>
       </section>
 
@@ -309,16 +186,16 @@ export default function LandingPage() {
             </div>
 
             <div className="space-y-3">
-              <div className="rounded-xl bg-[#edf4ff] p-3 text-sm text-[#132f4a]">
+              <div className="rounded-xl bg-[#edf4ff] p-3 text-sm text-[#132f4a] break-words">
                 Devo contratar agora?
               </div>
-              <div className="rounded-xl bg-[#f8fbff] p-3 text-sm text-[#44648a]">
+              <div className="rounded-xl bg-[#f8fbff] p-3 text-sm text-[#44648a] break-words">
                 Com runway de 8.7 meses, recomendo contratar só após reduzir o burn rate em 10%.
               </div>
-              <div className="rounded-xl bg-[#edf4ff] p-3 text-sm text-[#132f4a]">
+              <div className="rounded-xl bg-[#edf4ff] p-3 text-sm text-[#132f4a] break-words">
                 Quando atinjo break-even?
               </div>
-              <div className="rounded-xl bg-[#f8fbff] p-3 text-sm text-[#44648a]">
+              <div className="rounded-xl bg-[#f8fbff] p-3 text-sm text-[#44648a] break-words">
                 Mantendo o crescimento actual, previsão de break-even em 6 meses.
               </div>
             </div>
@@ -328,7 +205,7 @@ export default function LandingPage() {
         <div className="fade-in fade-in-delay-1">
           <span className="rose-section-tag">Conselheiro IA</span>
           <h2 className="rose-section-title" style={{ marginBottom: "24px" }}>
-            Recomendações claras, sem jargão
+            Conselhos claros, sem jargão
           </h2>
           <p style={{ color: "var(--gray-600)", fontSize: "16px", lineHeight: "1.7", marginBottom: "32px" }}>
             O teu CFO IA responde com números da tua empresa, recomenda acções concretas e mantém linguagem simples para decisões mais rápidas.

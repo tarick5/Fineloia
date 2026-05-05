@@ -78,7 +78,10 @@
       "step1": "Empresa",
       "step2": "Tamaño",
       "step3": "Moneda",
-      "step4": "Importación"
+      "step4": "Importación",
+      "passwordHint": "Mínimo de {min} caracteres.",
+      "passwordMin": "La contraseña debe tener al menos {min} caracteres.",
+      "step1Required": "Completa los campos obligatorios para continuar."
     }
   },
   "dashboard": {

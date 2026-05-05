@@ -2,6 +2,7 @@
 
 import { useMemo } from "react";
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 import {
   Bell,
   Bot,
@@ -10,7 +11,6 @@ import {
   Cog,
   CreditCard,
   FileChartColumnIncreasing,
-  FolderKanban,
   Landmark,
   LayoutDashboard,
 } from "lucide-react";
@@ -48,12 +48,15 @@ export function DashboardSidebar({
 
   return (
     <aside className="hidden w-[280px] border-r border-[#d3e2fb] bg-gradient-to-b from-[#0b1a2b] to-[#132f4a] text-[#92b6ff] lg:block">
-      <div className="flex h-16 items-center gap-2 border-b border-[#6e8eb6]/25 px-6">
-        <FolderKanban className="h-5 w-5 text-[#f8fbff]" />
-        <div>
-          <p className="text-sm text-[#92b6ff]/70">Fineloia</p>
-          <p className="text-sm font-semibold text-[#f8fbff]">{organizationName}</p>
-        </div>
+      <div className="flex h-16 items-center justify-between border-b border-[#6e8eb6]/25 px-6">
+        <Image
+          src="/brand/fineloia-logo-transparent.png"
+          alt="Fineloia"
+          width={1147}
+          height={419}
+          className="h-10 w-auto object-contain brightness-0 invert"
+        />
+        <p className="max-w-[120px] truncate text-xs font-medium text-[#92b6ff]/80">{organizationName}</p>
       </div>
 
       <nav className="space-y-1 p-4">

@@ -14,6 +14,7 @@ export function LoginForm() {
   const t = useTranslations("auth.login");
   const router = useRouter();
   const supabase = useMemo(() => createSupabaseBrowserClient(), []);
+  const isDemoMode = process.env.NEXT_PUBLIC_DEMO_MODE === "1";
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -25,9 +26,9 @@ export function LoginForm() {
     setLoading(true);
     setError(null);
 
-    if (!supabase) {
-      setError("Missing Supabase public environment variables.");
-      setLoading(false);
+    if (!supabase || isDemoMode) {
+      router.push("/demo-dashboard");
+      router.refresh();
       return;
     }
 
@@ -50,9 +51,9 @@ export function LoginForm() {
     setLoading(true);
     setError(null);
 
-    if (!supabase) {
-      setError("Missing Supabase public environment variables.");
-      setLoading(false);
+    if (!supabase || isDemoMode) {
+      router.push("/demo-dashboard");
+      router.refresh();
       return;
     }
 

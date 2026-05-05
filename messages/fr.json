@@ -78,7 +78,10 @@
       "step1": "Entreprise",
       "step2": "Taille",
       "step3": "Devise",
-      "step4": "Importation"
+      "step4": "Importation",
+      "passwordHint": "Minimum {min} caractères.",
+      "passwordMin": "Le mot de passe doit contenir au moins {min} caractères.",
+      "step1Required": "Veuillez remplir les champs obligatoires pour continuer."
     }
   },
   "dashboard": {

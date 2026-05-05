@@ -78,7 +78,10 @@
       "step1": "Company profile",
       "step2": "Team size",
       "step3": "Main currency",
-      "step4": "Data import preference"
+      "step4": "Data import preference",
+      "passwordHint": "Minimum {min} characters.",
+      "passwordMin": "Password must be at least {min} characters.",
+      "step1Required": "Fill in the required fields to continue."
     }
   },
   "dashboard": {

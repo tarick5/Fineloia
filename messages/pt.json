@@ -78,7 +78,10 @@
       "step1": "Perfil da empresa",
       "step2": "Dimensão da equipa",
       "step3": "Moeda principal",
-      "step4": "Preferência de importação"
+      "step4": "Preferência de importação",
+      "passwordHint": "Mínimo de {min} caracteres.",
+      "passwordMin": "A palavra-passe deve ter pelo menos {min} caracteres.",
+      "step1Required": "Preenche os campos obrigatórios para continuar."
     }
   },
   "dashboard": {

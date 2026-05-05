@@ -24,6 +24,7 @@ type WizardData = {
 };
 
 const sizes = ["1-10", "11-50", "51-200", "201-1000", "1000+"];
+const MIN_PASSWORD_LENGTH = 8;
 
 export function RegisterWizard() {
   const t = useTranslations("auth.register");
@@ -31,6 +32,7 @@ export function RegisterWizard() {
   const searchParams = useSearchParams();
 
   const supabase = useMemo(() => createSupabaseBrowserClient(), []);
+  const isDemoMode = process.env.NEXT_PUBLIC_DEMO_MODE === "1";
 
   const [step, setStep] = useState(1);
   const [loading, setLoading] = useState(false);
@@ -50,13 +52,21 @@ export function RegisterWizard() {
   async function handleFinish(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     setError(null);
-    setLoading(true);
 
-    if (!supabase) {
-      setError("Missing Supabase public environment variables.");
-      setLoading(false);
+    if (form.password.length < MIN_PASSWORD_LENGTH) {
+      setStep(1);
+      setError(t("passwordMin", { min: MIN_PASSWORD_LENGTH }));
       return;
     }
+
+    if (!supabase || isDemoMode) {
+      setLoading(true);
+      router.push("/demo-dashboard");
+      router.refresh();
+      return;
+    }
+
+    setLoading(true);
 
     const plan = searchParams.get("plan") ?? "starter";
     const billing = searchParams.get("billing") ?? "monthly";
@@ -104,6 +114,30 @@ export function RegisterWizard() {
     router.refresh();
   }
 
+  function handleNextStep() {
+    setError(null);
+
+    if (step === 1) {
+      if (
+        !form.email.trim() ||
+        !form.password ||
+        !form.companyName.trim() ||
+        !form.country.trim() ||
+        !form.sector.trim()
+      ) {
+        setError(t("step1Required"));
+        return;
+      }
+
+      if (form.password.length < MIN_PASSWORD_LENGTH) {
+        setError(t("passwordMin", { min: MIN_PASSWORD_LENGTH }));
+        return;
+      }
+    }
+
+    setStep((prev) => Math.min(4, prev + 1));
+  }
+
   return (
     <Card className="mx-auto w-full max-w-2xl border-0 bg-transparent shadow-none">
       <CardHeader>
@@ -139,10 +173,12 @@ export function RegisterWizard() {
                 <Input
                   id="password"
                   type="password"
+                  minLength={MIN_PASSWORD_LENGTH}
                   value={form.password}
                   onChange={(event) => setForm((prev) => ({ ...prev, password: event.target.value }))}
                   required
                 />
+                <p className="text-xs text-muted-foreground">{t("passwordHint", { min: MIN_PASSWORD_LENGTH })}</p>
               </div>
               <div className="space-y-2">
                 <Label htmlFor="companyName">Company name</Label>
@@ -236,7 +272,7 @@ export function RegisterWizard() {
             </Button>
 
             {step < 4 ? (
-              <Button type="button" disabled={loading} onClick={() => setStep((prev) => Math.min(4, prev + 1))}>
+              <Button type="button" disabled={loading} onClick={handleNextStep}>
                 {t("next")}
               </Button>
             ) : (

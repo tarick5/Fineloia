@@ -1,4 +1,5 @@
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 import { Link } from "@/lib/i18n/navigation";
 import { LanguageSwitcher } from "@/components/layout/language-switcher";
 
@@ -8,9 +9,15 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
   return (
     <div className="min-h-screen">
       <header className="rose-nav">
-        <Link href="/" className="rose-nav-logo">
-          Fineloia
-          <span className="rose-nav-logo-dot" />
+        <Link href="/" className="rose-nav-logo" aria-label="Fineloia">
+          <Image
+            src="/brand/fineloia-logo-transparent.png"
+            alt="Fineloia"
+            priority
+            width={1147}
+            height={419}
+            className="h-9 w-auto object-contain md:h-10"
+          />
         </Link>
 
         <nav>
@@ -36,6 +43,11 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
               </Link>
             </li>
             <li>
+              <Link className="rose-nav-link" href="/login">
+                {t("login")}
+              </Link>
+            </li>
+            <li>
               <Link className="rose-nav-cta" href="/register">
                 {t("cta")}
               </Link>
@@ -55,9 +67,14 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
 
       <footer className="rose-footer">
         <div>
-          <Link href="/" className="rose-nav-logo !text-white">
-            Fineloia
-            <span className="rose-nav-logo-dot" />
+          <Link href="/" className="rose-nav-logo" aria-label="Fineloia">
+            <Image
+              src="/brand/fineloia-logo-transparent.png"
+              alt="Fineloia"
+              width={1147}
+              height={419}
+              className="h-8 w-auto object-contain brightness-0 invert md:h-9"
+            />
           </Link>
           <p className="rose-footer-tagline">
             O CFO IA que ajuda empresas a analisar, prever e decidir melhor sem executar pagamentos.
