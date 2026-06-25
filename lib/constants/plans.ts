@@ -62,7 +62,7 @@ export const PLANS: Plan[] = [
       apiCallsPerMonth: 0,
     },
     features: [
-      "Up to 5 organizations",
+      "Up to 2 organizations",
       "10 seats",
       "Expanded AI report generation",
       "Fair-use AI advisor messages",
