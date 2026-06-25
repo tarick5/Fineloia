@@ -48,6 +48,14 @@ export function PricingCards({ detailed = false }: { detailed?: boolean }) {
       <div className="grid gap-5 lg:grid-cols-3">
         {prices.map((plan) => {
           const isFeatured = plan.id === "pro";
+          const isCustom = plan.customPricing;
+          const ctaClassName = cn(
+            "mt-8 inline-flex w-full items-center justify-center rounded-full px-4 py-3 text-sm font-medium transition-all",
+            isFeatured
+              ? "bg-[#2f6fff] text-white hover:bg-[#1f56d8]"
+              : "bg-[#0b1a2b] text-[#f8fbff] hover:-translate-y-0.5",
+          );
+
           return (
             <div
               key={plan.id}
@@ -69,12 +77,23 @@ export function PricingCards({ detailed = false }: { detailed?: boolean }) {
                 {plan.id === "starter"
                   ? "Para começar com análise e organização financeira."
                   : plan.id === "pro"
-                    ? "Para equipas que precisam escala, previsões e automação."
-                    : "Para operações complexas com necessidades avançadas."}
+                    ? "Para equipas que precisam de mais capacidade e previsões."
+                    : "Para equipas com requisitos custom e contrato próprio."}
               </p>
 
-              <p className="mt-7 text-5xl font-extrabold leading-none tracking-tight">€{plan.price}</p>
-              <p className={cn("mt-1 text-sm", isFeatured ? "text-white/45" : "text-[#6e8eb6]")}>por mês</p>
+              {isCustom ? (
+                <>
+                  <p className="mt-7 text-4xl font-extrabold leading-none tracking-tight">Sob consulta</p>
+                  <p className={cn("mt-2 text-sm", isFeatured ? "text-white/45" : "text-[#6e8eb6]")}>
+                    Definido contigo após scoping
+                  </p>
+                </>
+              ) : (
+                <>
+                  <p className="mt-7 text-5xl font-extrabold leading-none tracking-tight">€{plan.price}</p>
+                  <p className={cn("mt-1 text-sm", isFeatured ? "text-white/45" : "text-[#6e8eb6]")}>por mês</p>
+                </>
+              )}
 
               <ul className="mt-7 flex flex-1 flex-col gap-3">
                 {plan.features.map((feature) => (
@@ -98,17 +117,18 @@ export function PricingCards({ detailed = false }: { detailed?: boolean }) {
                 ))}
               </ul>
 
-              <Link
-                href={`/register?plan=${plan.id}&billing=${billing}`}
-                className={cn(
-                  "mt-8 inline-flex w-full items-center justify-center rounded-full px-4 py-3 text-sm font-medium transition-all",
-                  isFeatured
-                    ? "bg-[#2f6fff] text-white hover:bg-[#1f56d8]"
-                    : "bg-[#0b1a2b] text-[#f8fbff] hover:-translate-y-0.5",
-                )}
-              >
-                {t("start")}
-              </Link>
+              {isCustom ? (
+                <a
+                  href="mailto:sales@fineloia.ai?subject=Plano%20Enterprise%20Fineloia"
+                  className={ctaClassName}
+                >
+                  Falar connosco
+                </a>
+              ) : (
+                <Link href={`/register?plan=${plan.id}&billing=${billing}`} className={ctaClassName}>
+                  {t("start")}
+                </Link>
+              )}
             </div>
           );
         })}
@@ -127,13 +147,15 @@ export function PricingCards({ detailed = false }: { detailed?: boolean }) {
             </thead>
             <tbody>
               {[
-                ["Organizações", "1", "5", "Ilimitadas"],
-                ["Seats", "2", "10", "Ilimitados"],
-                ["Mensagens IA", "50/mês", "Ilimitadas", "Ilimitadas + contexto"],
-                ["Cenários Forecast", "1", "3", "3 + what-if"],
-                ["API", "Não", "100k/mês", "Ilimitada"],
+                ["Organizações", "1", "5", "Custom"],
+                ["Seats", "2", "10", "Custom"],
+                ["Relatórios IA", "3/mês", "Uso justo", "Custom"],
+                ["Mensagens IA", "50/mês", "Uso justo", "Custom"],
+                ["Cenários Forecast", "1", "3", "Custom"],
+                ["PDF export", "Incluído", "Incluído", "Incluído"],
+                ["API e integrações", "Não incluído", "Não incluído", "Após scoping"],
               ].map((row, idx) => (
-                <tr key={row[0]} className={idx === 4 ? "" : "border-b border-[#eef4ff]"}>
+                <tr key={row[0]} className={idx === 6 ? "" : "border-b border-[#eef4ff]"}>
                   {row.map((cell, cidx) => (
                     <td key={cell} className={cn("px-5 py-4", cidx === 0 ? "text-[#44648a]" : "text-[#132f4a]")}>
                       {cell}
@@ -143,10 +165,10 @@ export function PricingCards({ detailed = false }: { detailed?: boolean }) {
               ))}
 
               <tr className="border-t border-[#d3e2fb] bg-[#f8fbff]">
-                <td className="px-5 py-4 text-[#44648a]">White-label completo</td>
+                <td className="px-5 py-4 text-[#44648a]">Contrato Enterprise</td>
                 <td className="px-5 py-4 text-[#6e8eb6]"><X size={15} /></td>
                 <td className="px-5 py-4 text-[#6e8eb6]"><X size={15} /></td>
-                <td className="px-5 py-4 text-[#2f6fff]"><Check size={15} /></td>
+                <td className="px-5 py-4 text-[#2f6fff]">Sob consulta</td>
               </tr>
             </tbody>
           </table>

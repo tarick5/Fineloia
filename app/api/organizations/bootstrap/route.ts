@@ -34,8 +34,10 @@ export async function POST(request: Request) {
         currency: payload.currency,
         sector: payload.sector,
         size: payload.size,
-        plan: payload.plan,
-        billing_cycle: payload.billingCycle,
+        // Self-serve signups always start on Starter. Paid upgrades are applied
+        // by Stripe webhooks or internal admin flows after payment/contracting.
+        plan: "starter",
+        billing_cycle: "monthly",
         trial_ends_at: trialEndsAt,
       })
       .select("id")

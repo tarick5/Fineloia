@@ -21,7 +21,7 @@ export function AdvisorChat({
   remainingMessages,
 }: {
   organizationId: string;
-  remainingMessages: number | "unlimited";
+  remainingMessages: number | "fair-use";
 }) {
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [input, setInput] = useState("");
@@ -29,8 +29,8 @@ export function AdvisorChat({
 
   const remainingLabel = useMemo(
     () =>
-      remainingMessages === "unlimited"
-        ? "Unlimited messages"
+      remainingMessages === "fair-use"
+        ? "Fair-use messages"
         : `${remainingMessages} messages left this month`,
     [remainingMessages],
   );

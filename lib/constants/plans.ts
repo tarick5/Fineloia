@@ -4,17 +4,18 @@ export type BillingCycle = "monthly" | "annual";
 export type PlanLimit = {
   organizations: number;
   seats: number;
-  reportsPerMonth: number | "unlimited";
-  aiMessagesPerMonth: number | "unlimited";
+  reportsPerMonth: number | "fair-use" | "custom";
+  aiMessagesPerMonth: number | "fair-use" | "custom";
   scenarios: 1 | 3;
-  apiCallsPerMonth: number | "unlimited";
+  apiCallsPerMonth: number | "scoped";
 };
 
 export type Plan = {
   id: PlanId;
   name: string;
-  monthlyPrice: number;
-  annualMonthlyEquivalent: number;
+  monthlyPrice: number | null;
+  annualMonthlyEquivalent: number | null;
+  customPricing?: boolean;
   highlighted?: boolean;
   limits: PlanLimit;
   features: string[];
@@ -38,10 +39,10 @@ export const PLANS: Plan[] = [
       "1 organization",
       "2 seats",
       "CSV import + manual entries",
-      "Up to 3 automatic monthly reports",
+      "Up to 3 AI reports / month",
       "Basic treasury and margin alerts",
       "50 AI advisor messages / month",
-      "Single forecast scenario",
+      "1 forecast scenario",
       "PDF export",
       "Email support",
     ],
@@ -55,47 +56,46 @@ export const PLANS: Plan[] = [
     limits: {
       organizations: 5,
       seats: 10,
-      reportsPerMonth: "unlimited",
-      aiMessagesPerMonth: "unlimited",
+      reportsPerMonth: "fair-use",
+      aiMessagesPerMonth: "fair-use",
       scenarios: 3,
-      apiCallsPerMonth: 100_000,
+      apiCallsPerMonth: 0,
     },
     features: [
       "Up to 5 organizations",
       "10 seats",
-      "Unlimited reports",
-      "Advanced anomaly and benchmark alerts",
-      "Unlimited AI advisor messages",
+      "Expanded AI report generation",
+      "Fair-use AI advisor messages",
       "3 forecast scenarios",
-      "What-if analysis",
-      "Benchmarking by country and sector",
-      "Read-only API (100k calls / month)",
-      "Priority chat support",
+      "Advanced treasury and margin alerts",
+      "Benchmark-ready insights when data is available",
+      "PDF export",
+      "Priority support",
     ],
   },
   {
     id: "enterprise",
     name: "Enterprise",
-    monthlyPrice: 499,
-    annualMonthlyEquivalent: 399,
+    monthlyPrice: null,
+    annualMonthlyEquivalent: null,
+    customPricing: true,
     limits: {
       organizations: Number.MAX_SAFE_INTEGER,
       seats: Number.MAX_SAFE_INTEGER,
-      reportsPerMonth: "unlimited",
-      aiMessagesPerMonth: "unlimited",
+      reportsPerMonth: "custom",
+      aiMessagesPerMonth: "custom",
       scenarios: 3,
-      apiCallsPerMonth: "unlimited",
+      apiCallsPerMonth: "scoped",
     },
     features: [
-      "Unlimited organizations and seats",
-      "White-label customization",
-      "ERP webhooks (SAP, Primavera, Quickbooks, Oracle)",
-      "Realtime alerts via Slack, Teams, and email",
-      "Unlimited API",
-      "99.9% SLA",
-      "Dedicated account manager",
+      "Custom organizations and seats",
+      "Custom AI and report usage",
+      "Scoped integrations and API access",
+      "Advanced controls for larger teams",
+      "PDF export",
       "Custom onboarding",
-      "24/7 support",
+      "Priority implementation support",
+      "Enterprise billing and contract",
     ],
   },
 ];

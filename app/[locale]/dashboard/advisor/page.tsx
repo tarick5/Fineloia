@@ -11,7 +11,7 @@ export default async function AdvisorPage() {
     return null;
   }
 
-  let remainingMessages: number | "unlimited" = "unlimited";
+  let remainingMessages: number | "fair-use" = "fair-use";
   if (organization.plan === "starter") {
     const supabase = createSupabaseServerClient();
     const monthStart = new Date();

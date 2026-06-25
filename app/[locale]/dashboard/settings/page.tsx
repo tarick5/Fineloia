@@ -19,11 +19,11 @@ export default function SettingsPage() {
         />
         <SectionPlaceholder
           title="Integrations"
-          description="Configure ERP webhooks, API keys, and notification channels."
+          description="Manage import settings and scoped integrations as they become available."
         />
         <SectionPlaceholder
           title="Notifications"
-          description="Choose alert channels for email, Slack, and Teams."
+          description="Choose supported alert channels for generated financial warnings."
         />
         <SectionPlaceholder
           title="GDPR"

@@ -26,7 +26,7 @@ export async function enforceChatPlanLimit({
   const { plan } = await getOrganizationPlan(organizationId);
 
   if (plan !== "starter") {
-    return { remaining: "unlimited" as const };
+    return { remaining: "fair-use" as const };
   }
 
   const monthStart = startOfMonth(new Date()).toISOString();
